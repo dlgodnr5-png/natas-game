@@ -11,7 +11,10 @@
         { "name": "팩맨", "type": "embed", "path": "/arcade/pacman/", "license": "CC0-1.0", "source": "https://github.com/platzhersh/pacman-canvas", "author": "platzh1rsch", "badge": "CC0", "thumb": "🟡" },
         { "name": "테트리스", "type": "embed", "path": "/arcade/tetris/", "license": "MIT", "source": "https://github.com/jakesgordon/javascript-tetris", "author": "Jake Gordon", "badge": "MIT", "thumb": "🟦" },
         { "name": "브레이크아웃", "type": "embed", "path": "/arcade/breakout/", "license": "MIT", "source": "https://github.com/jakesgordon/javascript-breakout", "author": "Jake Gordon", "badge": "MIT", "thumb": "🧱" },
-        { "name": "퐁", "type": "embed", "path": "/arcade/pong/", "license": "MIT", "source": "https://github.com/jakesgordon/javascript-pong", "author": "Jake Gordon", "badge": "MIT", "thumb": "🏓" }
+        { "name": "퐁", "type": "embed", "path": "/arcade/pong/", "license": "MIT", "source": "https://github.com/jakesgordon/javascript-pong", "author": "Jake Gordon", "badge": "MIT", "thumb": "🏓" },
+        { "name": "프로거", "type": "embed", "path": "/arcade/frogger/", "license": "MIT", "source": "https://github.com/wesliang/arcade-game", "author": "Wesley Liang", "badge": "MIT", "thumb": "🐸" },
+        { "name": "두들 점프", "type": "embed", "path": "/arcade/doodle-jump/", "license": "CC0", "source": "https://gist.github.com/straker/b96a4a68bd6d79cf75a833d98a2b654f", "author": "Steven Lambert (straker)", "badge": "CC0", "thumb": "🦘" },
+        { "name": "osu!", "type": "external", "url": "https://osu.ppy.sh", "license": "MIT", "source": "https://github.com/ppy/osu", "author": "ppy", "badge": "명작", "thumb": "🎶" }
       ]
     },
     {
@@ -21,7 +24,9 @@
         { "name": "지뢰찾기", "type": "embed", "path": "/puzzle/minesweeper/", "license": "MIT", "source": "https://github.com/Mattli8312/MineSweeper", "author": "Matt Li", "badge": "MIT", "thumb": "💣" },
         { "name": "라이프 게임", "type": "embed", "path": "/puzzle/game-of-life/", "license": "MIT", "source": "https://github.com/pmav/game-of-life", "author": "Pedro Verruma", "badge": "MIT", "thumb": "🦠" },
         { "name": "슬라이드 퍼즐", "type": "embed", "path": "/puzzle/slide-puzzle/", "license": "MIT", "source": "https://github.com/Xpaid/Sliding-Puzzle", "author": "Jetro Apilado", "badge": "MIT", "thumb": "🧩" },
-        { "name": "메모리", "type": "embed", "path": "/puzzle/memory/", "license": "MIT", "source": "https://github.com/taniarascia/memory", "author": "Tania Rascia", "badge": "MIT", "thumb": "🧠" }
+        { "name": "메모리", "type": "embed", "path": "/puzzle/memory/", "license": "MIT", "source": "https://github.com/taniarascia/memory", "author": "Tania Rascia", "badge": "MIT", "thumb": "🧠" },
+        { "name": "스도쿠", "type": "embed", "path": "/puzzle/sudoku/", "license": "MIT", "source": "https://github.com/robatron/sudoku.js", "author": "Rob McGuire-Dale", "badge": "MIT", "thumb": "🔢" },
+        { "name": "라이트 아웃", "type": "embed", "path": "/puzzle/lights-out/", "license": "MIT", "source": "https://github.com/ct-Open-Source/lightsout", "author": "Oliver Lau / c't", "badge": "MIT", "thumb": "💡" }
       ]
     },
     {
@@ -32,6 +37,8 @@
         { "name": "Chess", "type": "embed", "path": "/board-card/chess/", "license": "MIT", "source": "https://github.com/kbjorklu/chess", "author": "Kaj Björklund", "badge": "MIT", "thumb": "♟️" },
         { "name": "Tic-Tac-Toe", "type": "embed", "path": "/board-card/tic-tac-toe/", "license": "MIT", "source": "https://github.com/ramazancetinkaya/tictactoe", "author": "R. Çetinkaya", "badge": "MIT", "thumb": "❌" },
         { "name": "Checkers", "type": "embed", "path": "/board-card/checkers/", "license": "MIT", "source": "https://github.com/gneutzling/checkers-game", "author": "G. Neutzling", "badge": "MIT", "thumb": "⚪" },
+        { "name": "Connect Four", "type": "embed", "path": "/board-card/connect-four/", "license": "MIT", "source": "https://github.com/bryanbraun/connect-four", "author": "Bryan Braun", "badge": "MIT", "thumb": "🔴" },
+        { "name": "Blackjack", "type": "embed", "path": "/board-card/blackjack/", "license": "Apache-2.0", "source": "https://github.com/Saganaki22/Blackjack", "author": "Saganaki22", "badge": "Apache-2.0", "thumb": "🃏" },
         { "name": "lichess", "type": "external", "url": "https://lichess.org", "license": "AGPL-3.0", "source": "https://github.com/lichess-org/lila", "author": "Lichess", "badge": "명작", "thumb": "♞" },
         { "name": "오목", "type": "external", "url": "https://aiworldmaker.happygold.shop/games/omok", "license": "내부 게임", "source": "https://aiworldmaker.happygold.shop", "author": "AI WORLD MAKER", "badge": "내부 게임", "thumb": "⚫" },
         { "name": "장기", "type": "external", "url": "https://aiworldmaker.happygold.shop/games/janggi", "license": "내부 게임", "source": "https://aiworldmaker.happygold.shop", "author": "AI WORLD MAKER", "badge": "내부 게임", "thumb": "🁢" }
@@ -45,6 +52,8 @@
         { "name": "Snake", "type": "embed", "path": "/action-shooter/snake/", "license": "MIT", "source": "https://github.com/ramazancetinkaya/snake-game", "author": "R. Çetinkaya", "badge": "MIT", "thumb": "🐍" },
         { "name": "Racer", "type": "embed", "path": "/action-shooter/racer/", "license": "MIT", "source": "https://github.com/jakesgordon/javascript-racer", "author": "Jake Gordon", "badge": "MIT", "thumb": "🏎️" },
         { "name": "Space Invaders", "type": "embed", "path": "/action-shooter/space-shooter/", "license": "MIT", "source": "https://github.com/dwmkerr/spaceinvaders", "author": "Dave Kerr", "badge": "MIT", "thumb": "👾" },
+        { "name": "Arena5", "type": "embed", "path": "/action-shooter/arena5/", "license": "MIT", "source": "https://github.com/kevinroast/arena5", "author": "Kevin Roast", "badge": "MIT", "thumb": "🌀" },
+        { "name": "Brick Breaker", "type": "embed", "path": "/action-shooter/brick-breaker/", "license": "MIT", "source": "https://github.com/cchangr/Brick-Breaker", "author": "chen", "badge": "MIT", "thumb": "🧱" },
         { "name": "갤러그", "type": "external", "url": "https://natas-galaga.spatialhealing.co.kr/", "license": "내부 배포", "source": "https://natas-galaga.spatialhealing.co.kr/", "author": "NATAS 팀", "badge": "명작", "thumb": "🚀" }
       ]
     },
@@ -54,10 +63,13 @@
       "games": [
         { "name": "Tower Defense Pro", "type": "embed", "path": "/strategy-sim/tower-defense/", "license": "MIT", "source": "https://github.com/sp-brj/tower-defense-pro", "author": "sp-brj", "badge": "MIT", "thumb": "🏯" },
         { "name": "Tower Game", "type": "embed", "path": "/strategy-sim/tower-game/", "license": "MIT", "source": "https://github.com/iamkun/tower_game", "author": "iamkun", "badge": "MIT", "thumb": "🏗️" },
+        { "name": "Particle Clicker", "type": "embed", "path": "/strategy-sim/particle-clicker/", "license": "MIT", "source": "https://github.com/particle-clicker/particle-clicker", "author": "CERN Webfest 2014", "badge": "MIT", "thumb": "⚛️" },
         { "name": "Mindustry", "type": "external", "url": "https://mindustrygame.github.io", "license": "GPL-3.0", "source": "https://github.com/Anuken/Mindustry", "author": "Anuken", "badge": "명작", "thumb": "⚙️" },
         { "name": "OpenTTD", "type": "external", "url": "https://www.openttd.org", "license": "GPL-2.0", "source": "https://github.com/OpenTTD/OpenTTD", "author": "OpenTTD", "badge": "명작", "thumb": "🚂" },
         { "name": "OpenRCT2", "type": "external", "url": "https://openrct2.io", "license": "GPL-3.0", "source": "https://github.com/OpenRCT2/OpenRCT2", "author": "OpenRCT2", "badge": "명작", "thumb": "🎢" },
-        { "name": "0 A.D.", "type": "external", "url": "https://play0ad.com", "license": "GPL-2.0", "source": "https://github.com/0ad/0ad", "author": "Wildfire Games", "badge": "명작", "thumb": "⚔️" }
+        { "name": "0 A.D.", "type": "external", "url": "https://play0ad.com", "license": "GPL-2.0", "source": "https://github.com/0ad/0ad", "author": "Wildfire Games", "badge": "명작", "thumb": "⚔️" },
+        { "name": "OpenRA", "type": "external", "url": "https://www.openra.net", "license": "GPL-3.0", "source": "https://github.com/OpenRA/OpenRA", "author": "OpenRA", "badge": "명작", "thumb": "🛡️" },
+        { "name": "Cataclysm: DDA", "type": "external", "url": "https://cataclysmdda.org", "license": "CC-BY-SA-3.0", "source": "https://github.com/CleverRaven/Cataclysm-DDA", "author": "CleverRaven", "badge": "명작", "thumb": "🧟" }
       ]
     },
     {
@@ -67,7 +79,8 @@
         { "name": "Flappy Bird", "type": "embed", "path": "/casual/flappy/", "license": "Apache-2.0", "source": "https://github.com/nebez/floppybird", "author": "Nebez Briefkani", "badge": "Apache-2.0", "thumb": "🐤" },
         { "name": "Dino Runner", "type": "embed", "path": "/casual/dino/", "license": "BSD-3-Clause", "source": "https://github.com/wayou/t-rex-runner", "author": "wayou", "badge": "BSD-3", "thumb": "🦖" },
         { "name": "Simon", "type": "embed", "path": "/casual/simon/", "license": "MIT", "source": "https://github.com/arjuncvinod/Simon-Game", "author": "arjuncvinod", "badge": "MIT", "thumb": "🎵" },
-        { "name": "Memory Match", "type": "embed", "path": "/casual/memory/", "license": "MIT", "source": "https://github.com/mmenavas/memory-game", "author": "mmenavas", "badge": "MIT", "thumb": "🧠" }
+        { "name": "Memory Match", "type": "embed", "path": "/casual/memory/", "license": "MIT", "source": "https://github.com/mmenavas/memory-game", "author": "mmenavas", "badge": "MIT", "thumb": "🧠" },
+        { "name": "Whack-a-Mole", "type": "embed", "path": "/casual/whack-a-mole/", "license": "MIT", "source": "https://github.com/JivkoJelev91/Whack-A-Mole", "author": "JivkoJelev91", "badge": "MIT", "thumb": "🔨" }
       ]
     }
   ]

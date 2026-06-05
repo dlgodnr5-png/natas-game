@@ -6,6 +6,9 @@ Thumbs.db
 # Test / tooling artifacts
 .playwright-mcp/
 .vercel/
+.claude/
 
 # Node (포털은 빌드가 없으나 도구 설치 대비)
 node_modules/
+
+.vercel

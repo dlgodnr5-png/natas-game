@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights out</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            background-color: #222;
+            color: #eee;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            padding: 8px 8px 2px 8px;
+        }
+
+        button {
+            width: 44px;
+            height: 44px;
+        }
+
+    </style>
+    <script defer src="solver.js"></script>
+    <script defer src="lightsout.js"></script>
+</head>
+
+<body>
+    <p>모든 칸을 같은 색으로 만드세요! (칸을 누르면 상하좌우 칸이 함께 토글됩니다)</p>
+    <p><button id="incr">&plus;</button><button id="decr">&minus;</button></p>
+    <lightsout-game data-width="5" data-height="5" data-states="2"></lightsout-game>
+    <script>
+        const game = document.querySelector('lightsout-game');
+        const incrButton = document.querySelector('#incr');
+        incrButton.addEventListener('click', () => {
+            const w = parseInt(game.getAttribute('data-width'));
+            game.setAttribute('data-width', w + 1);
+            const h = parseInt(game.getAttribute('data-height'));
+            game.setAttribute('data-height', h + 1);
+        });
+        const decrButton = document.querySelector('#decr');
+        decrButton.addEventListener('click', () => {
+            const w = parseInt(game.getAttribute('data-width'));
+            game.setAttribute('data-width', Math.max(5, w - 1));
+            const h = parseInt(game.getAttribute('data-height'));
+            game.setAttribute('data-height', Math.max(5, h - 1));
+        });
+    </script>
+</body>
+
+</html>
