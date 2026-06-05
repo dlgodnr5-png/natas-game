@@ -1,0 +1,74 @@
+{
+  "team": "NATAS 팀",
+  "portal": "https://game.spatialhealing.co.kr",
+  "subscribeUrl": "https://aiworldmaker.happygold.shop/subscribe",
+  "themes": [
+    {
+      "id": "arcade",
+      "title": "아케이드",
+      "games": [
+        { "name": "2048", "type": "embed", "path": "/arcade/2048/", "license": "MIT", "source": "https://github.com/gabrielecirulli/2048", "author": "Gabriele Cirulli", "badge": "MIT", "thumb": "🎲" },
+        { "name": "팩맨", "type": "embed", "path": "/arcade/pacman/", "license": "CC0-1.0", "source": "https://github.com/platzhersh/pacman-canvas", "author": "platzh1rsch", "badge": "CC0", "thumb": "🟡" },
+        { "name": "테트리스", "type": "embed", "path": "/arcade/tetris/", "license": "MIT", "source": "https://github.com/jakesgordon/javascript-tetris", "author": "Jake Gordon", "badge": "MIT", "thumb": "🟦" },
+        { "name": "브레이크아웃", "type": "embed", "path": "/arcade/breakout/", "license": "MIT", "source": "https://github.com/jakesgordon/javascript-breakout", "author": "Jake Gordon", "badge": "MIT", "thumb": "🧱" },
+        { "name": "퐁", "type": "embed", "path": "/arcade/pong/", "license": "MIT", "source": "https://github.com/jakesgordon/javascript-pong", "author": "Jake Gordon", "badge": "MIT", "thumb": "🏓" }
+      ]
+    },
+    {
+      "id": "puzzle",
+      "title": "퍼즐",
+      "games": [
+        { "name": "지뢰찾기", "type": "embed", "path": "/puzzle/minesweeper/", "license": "MIT", "source": "https://github.com/Mattli8312/MineSweeper", "author": "Matt Li", "badge": "MIT", "thumb": "💣" },
+        { "name": "라이프 게임", "type": "embed", "path": "/puzzle/game-of-life/", "license": "MIT", "source": "https://github.com/pmav/game-of-life", "author": "Pedro Verruma", "badge": "MIT", "thumb": "🦠" },
+        { "name": "슬라이드 퍼즐", "type": "embed", "path": "/puzzle/slide-puzzle/", "license": "MIT", "source": "https://github.com/Xpaid/Sliding-Puzzle", "author": "Jetro Apilado", "badge": "MIT", "thumb": "🧩" },
+        { "name": "메모리", "type": "embed", "path": "/puzzle/memory/", "license": "MIT", "source": "https://github.com/taniarascia/memory", "author": "Tania Rascia", "badge": "MIT", "thumb": "🧠" }
+      ]
+    },
+    {
+      "id": "board-card",
+      "title": "보드·카드",
+      "games": [
+        { "name": "Solitaire", "type": "embed", "path": "/board-card/solitaire/", "license": "MIT", "source": "https://github.com/jhatzimalis/solitaire", "author": "J. Hatzimalis", "badge": "MIT", "thumb": "🃏" },
+        { "name": "Chess", "type": "embed", "path": "/board-card/chess/", "license": "MIT", "source": "https://github.com/kbjorklu/chess", "author": "Kaj Björklund", "badge": "MIT", "thumb": "♟️" },
+        { "name": "Tic-Tac-Toe", "type": "embed", "path": "/board-card/tic-tac-toe/", "license": "MIT", "source": "https://github.com/ramazancetinkaya/tictactoe", "author": "R. Çetinkaya", "badge": "MIT", "thumb": "❌" },
+        { "name": "Checkers", "type": "embed", "path": "/board-card/checkers/", "license": "MIT", "source": "https://github.com/gneutzling/checkers-game", "author": "G. Neutzling", "badge": "MIT", "thumb": "⚪" },
+        { "name": "lichess", "type": "external", "url": "https://lichess.org", "license": "AGPL-3.0", "source": "https://github.com/lichess-org/lila", "author": "Lichess", "badge": "명작", "thumb": "♞" },
+        { "name": "오목", "type": "external", "url": "https://aiworldmaker.happygold.shop/games/omok", "license": "내부 게임", "source": "https://aiworldmaker.happygold.shop", "author": "AI WORLD MAKER", "badge": "내부 게임", "thumb": "⚫" },
+        { "name": "장기", "type": "external", "url": "https://aiworldmaker.happygold.shop/games/janggi", "license": "내부 게임", "source": "https://aiworldmaker.happygold.shop", "author": "AI WORLD MAKER", "badge": "내부 게임", "thumb": "🁢" }
+      ]
+    },
+    {
+      "id": "action-shooter",
+      "title": "액션·슈팅",
+      "games": [
+        { "name": "Asteroids", "type": "embed", "path": "/action-shooter/asteroids/", "license": "MIT", "source": "https://github.com/dmcinnes/HTML5-Asteroids", "author": "Doug McInnes", "badge": "MIT", "thumb": "☄️" },
+        { "name": "Snake", "type": "embed", "path": "/action-shooter/snake/", "license": "MIT", "source": "https://github.com/ramazancetinkaya/snake-game", "author": "R. Çetinkaya", "badge": "MIT", "thumb": "🐍" },
+        { "name": "Racer", "type": "embed", "path": "/action-shooter/racer/", "license": "MIT", "source": "https://github.com/jakesgordon/javascript-racer", "author": "Jake Gordon", "badge": "MIT", "thumb": "🏎️" },
+        { "name": "Space Invaders", "type": "embed", "path": "/action-shooter/space-shooter/", "license": "MIT", "source": "https://github.com/dwmkerr/spaceinvaders", "author": "Dave Kerr", "badge": "MIT", "thumb": "👾" },
+        { "name": "갤러그", "type": "external", "url": "https://natas-galaga.spatialhealing.co.kr/", "license": "내부 배포", "source": "https://natas-galaga.spatialhealing.co.kr/", "author": "NATAS 팀", "badge": "명작", "thumb": "🚀" }
+      ]
+    },
+    {
+      "id": "strategy-sim",
+      "title": "전략·시뮬",
+      "games": [
+        { "name": "Tower Defense Pro", "type": "embed", "path": "/strategy-sim/tower-defense/", "license": "MIT", "source": "https://github.com/sp-brj/tower-defense-pro", "author": "sp-brj", "badge": "MIT", "thumb": "🏯" },
+        { "name": "Tower Game", "type": "embed", "path": "/strategy-sim/tower-game/", "license": "MIT", "source": "https://github.com/iamkun/tower_game", "author": "iamkun", "badge": "MIT", "thumb": "🏗️" },
+        { "name": "Mindustry", "type": "external", "url": "https://mindustrygame.github.io", "license": "GPL-3.0", "source": "https://github.com/Anuken/Mindustry", "author": "Anuken", "badge": "명작", "thumb": "⚙️" },
+        { "name": "OpenTTD", "type": "external", "url": "https://www.openttd.org", "license": "GPL-2.0", "source": "https://github.com/OpenTTD/OpenTTD", "author": "OpenTTD", "badge": "명작", "thumb": "🚂" },
+        { "name": "OpenRCT2", "type": "external", "url": "https://openrct2.io", "license": "GPL-3.0", "source": "https://github.com/OpenRCT2/OpenRCT2", "author": "OpenRCT2", "badge": "명작", "thumb": "🎢" },
+        { "name": "0 A.D.", "type": "external", "url": "https://play0ad.com", "license": "GPL-2.0", "source": "https://github.com/0ad/0ad", "author": "Wildfire Games", "badge": "명작", "thumb": "⚔️" }
+      ]
+    },
+    {
+      "id": "casual",
+      "title": "캐주얼",
+      "games": [
+        { "name": "Flappy Bird", "type": "embed", "path": "/casual/flappy/", "license": "Apache-2.0", "source": "https://github.com/nebez/floppybird", "author": "Nebez Briefkani", "badge": "Apache-2.0", "thumb": "🐤" },
+        { "name": "Dino Runner", "type": "embed", "path": "/casual/dino/", "license": "BSD-3-Clause", "source": "https://github.com/wayou/t-rex-runner", "author": "wayou", "badge": "BSD-3", "thumb": "🦖" },
+        { "name": "Simon", "type": "embed", "path": "/casual/simon/", "license": "MIT", "source": "https://github.com/arjuncvinod/Simon-Game", "author": "arjuncvinod", "badge": "MIT", "thumb": "🎵" },
+        { "name": "Memory Match", "type": "embed", "path": "/casual/memory/", "license": "MIT", "source": "https://github.com/mmenavas/memory-game", "author": "mmenavas", "badge": "MIT", "thumb": "🧠" }
+      ]
+    }
+  ]
+}

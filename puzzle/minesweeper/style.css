@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: grey;
+}
+.navbar{
+    position: relative;
+    display: flex;
+    font-size: 200%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    width: 100%;
+    background: #ce2029;
+}
+#center_nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#bomb_count, #clock{
+    background: black;
+    border-radius: 5px;
+    color: white;
+    padding: 0.5em 1em 0.5em 1em;
+}
+#face{
+    color: yellow;
+    padding: 0.5em;
+    margin: 0 0.5em 0 0.5em;
+    background: grey;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.line{
+    background:white;
+    width: 1em;
+    height: 0.1em;
+    margin: 0.1em;
+}
+#grid{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background: lightgrey;
+    margin: auto;
+    justify-content: space-around;
+}
+#options, #options_open{
+    color: white;
+    cursor: pointer;
+}
+#options ul{
+    display: none;
+}
+#options_open ul{
+    position: absolute;
+    background: #ce2029;
+    list-style: none;
+    left: 0;
+    z-index: 5;
+}
+#difficulties, #customizer, #AI{
+    cursor: pointer;
+    padding: 1em;
+    color: white;
+    font-size: 0.7em;
+    transition: all 0.2s ease-in;
+}
+#difficulties:hover, #customizer:hover, #AI:hover{
+    border-radius: 0.5em;
+    background: white;
+    color: black;
+}
+.check_0{
+    text-align: center;
+    color: darkgray;
+    background: darkgrey;
+    border: 10px solid black;
+}
+.check_1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: table-cell;
+    vertical-align:auto;
+    text-align: center;
+    background: darkgray;
+    color: blue;
+}
+.check_2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: table-cell;
+    vertical-align:auto;
+    text-align: center;
+    background: darkgrey;
+    color: green;
+}
+.check_3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: table-cell;
+    vertical-align:auto;
+    text-align: center;
+    background: darkgrey;
+    color: red;
+}
+.check_4{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: table-cell;
+    vertical-align:auto;
+    text-align: center;
+    background: darkgrey;
+    color: navy;
+}
+.check_5{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: table-cell;
+    vertical-align:auto;
+    text-align: center;
+    background: darkgrey;
+    color: darkred;
+}
+.check_6{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: table-cell;
+    vertical-align:auto;
+    text-align: center;
+    background: darkgrey;
+    color: cyan;
+}
+.detonated{
+    background: grey;
+}

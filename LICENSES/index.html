@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>출처 · 라이선스 — 모두의 게임</title>
+  <meta name="description" content="모두의 게임 포털에 포함된 모든 오픈소스 게임의 출처, 저작자, 라이선스 목록.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+  <link rel="stylesheet" href="/assets/css/natas.css">
+</head>
+<body>
+  <div id="natas-header"></div>
+
+  <main class="wrap">
+    <div class="crumb"><a href="/">← 포털 홈</a></div>
+    <div class="page-head" style="--g:var(--grad-board)">
+      <div class="ico">📜</div>
+      <div>
+        <h1>출처 · 라이선스</h1>
+        <p>이 포털의 모든 게임은 오픈소스입니다. 각 게임의 저작권/라이선스는 원저작자에게 있으며, 아래에 출처를 표기합니다. 내장 게임 폴더에는 원본 라이선스 파일이 그대로 포함되어 있습니다.</p>
+      </div>
+    </div>
+
+    <div id="lic-embed">
+      <div class="lic-section">🎮 내장 게임 (드롭인 오픈소스)</div>
+      <table class="lic-table"><thead><tr><th>게임</th><th>테마</th><th>저작자</th><th>출처 (GitHub)</th><th>라이선스</th></tr></thead>
+        <tbody id="lic-embed-body"><tr><td colspan="5" style="color:var(--muted2)">불러오는 중…</td></tr></tbody>
+      </table>
+    </div>
+
+    <div id="lic-external">
+      <div class="lic-section">🏆 외부 명작 (공식 사이트 링크)</div>
+      <table class="lic-table"><thead><tr><th>게임</th><th>테마</th><th>저작자/프로젝트</th><th>공식 사이트</th><th>라이선스</th></tr></thead>
+        <tbody id="lic-external-body"><tr><td colspan="5" style="color:var(--muted2)">불러오는 중…</td></tr></tbody>
+      </table>
+    </div>
+
+    <p style="color:var(--muted2);font-size:13px;margin-top:26px">
+      누락·정정 요청은 저장소 이슈로 알려주세요: <a href="https://github.com/dlgodnr5-png/natas-game" target="_blank" rel="noopener">github.com/dlgodnr5-png/natas-game</a>
+    </p>
+  </main>
+
+  <div id="natas-footer"></div>
+  <script src="/assets/js/natas.js" defer></script>
+  <script>
+    var THEME_LABEL = {
+      "arcade":"아케이드","puzzle":"퍼즐","board-card":"보드·카드",
+      "action-shooter":"액션·슈팅","strategy-sim":"전략·시뮬","casual":"캐주얼"
+    };
+    fetch("/games.json").then(function(r){return r.json();}).then(function(data){
+      var embed=[], ext=[];
+      (data.themes||[]).forEach(function(t){
+        (t.games||[]).forEach(function(g){
+          var row=Object.assign({theme:t.id}, g);
+          (g.type==="external"?ext:embed).push(row);
+        });
+      });
+      function cell(g){
+        var src = g.source
+          ? '<a href="'+g.source+'" target="_blank" rel="noopener">'+g.source.replace("https://github.com/","")+'</a>'
+          : (g.url?'<a href="'+g.url+'" target="_blank" rel="noopener">'+g.url+'</a>':'—');
+        return "<tr><td><strong>"+g.name+"</strong></td><td>"+(THEME_LABEL[g.theme]||g.theme)+
+          "</td><td>"+(g.author||"—")+"</td><td>"+src+"</td><td>"+(g.license||"—")+"</td></tr>";
+      }
+      document.getElementById("lic-embed-body").innerHTML =
+        embed.length?embed.map(cell).join(""):'<tr><td colspan="5" style="color:var(--muted2)">등록된 내장 게임이 없습니다.</td></tr>';
+      document.getElementById("lic-external-body").innerHTML =
+        ext.length?ext.map(cell).join(""):'<tr><td colspan="5" style="color:var(--muted2)">등록된 외부 명작이 없습니다.</td></tr>';
+    }).catch(function(){
+      document.getElementById("lic-embed-body").innerHTML='<tr><td colspan="5" style="color:var(--muted2)">games.json을 불러올 수 없습니다 (정적 서버에서 확인하세요).</td></tr>';
+      document.getElementById("lic-external-body").innerHTML='';
+    });
+  </script>
+</body>
+</html>

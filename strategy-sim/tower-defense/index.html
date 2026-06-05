@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Defense Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- ===== ГЛАВНОЕ МЕНЮ ===== -->
+        <div id="main-menu" class="screen active">
+            <h1>⚔️ Tower Defense</h1>
+            <p class="subtitle">Защити базу от волн врагов</p>
+            <div class="menu-buttons">
+                <button class="main-btn primary" id="play-btn">▶ ИГРАТЬ</button>
+                <button class="main-btn" id="records-btn">🏆 Рекорды</button>
+                <button class="main-btn" id="settings-btn">⚙ Настройки</button>
+            </div>
+            <p class="version-info">v3.0 | Клавиши: 1-6 башни, Q/W способности, Space волна, Esc пауза</p>
+        </div>
+
+        <!-- ===== ВЫБОР ГЕРОЯ ===== -->
+        <div id="hero-screen" class="screen">
+            <h2>Выбери героя</h2>
+            <div class="heroes-grid">
+                <div class="hero-card selected" data-hero="knight">
+                    <div class="hero-icon">🛡️</div>
+                    <h3>Рыцарь</h3>
+                    <p class="hero-desc">Крепкий воин. Много здоровья, сильные атаки.</p>
+                    <div class="hero-stats">
+                        <div class="stat-row"><span>HP</span><div class="stat-bar"><div class="stat-fill" style="width: 100%"></div></div></div>
+                        <div class="stat-row"><span>Атака</span><div class="stat-bar"><div class="stat-fill" style="width: 80%"></div></div></div>
+                        <div class="stat-row"><span>Скорость</span><div class="stat-bar"><div class="stat-fill" style="width: 40%"></div></div></div>
+                        <div class="stat-row"><span>Дальность</span><div class="stat-bar"><div class="stat-fill" style="width: 40%"></div></div></div>
+                    </div>
+                </div>
+                <div class="hero-card" data-hero="archer">
+                    <div class="hero-icon">🏹</div>
+                    <h3>Лучница</h3>
+                    <p class="hero-desc">Быстрая и ловкая. Бьёт издалека.</p>
+                    <div class="hero-stats">
+                        <div class="stat-row"><span>HP</span><div class="stat-bar"><div class="stat-fill" style="width: 40%"></div></div></div>
+                        <div class="stat-row"><span>Атака</span><div class="stat-bar"><div class="stat-fill" style="width: 60%"></div></div></div>
+                        <div class="stat-row"><span>Скорость</span><div class="stat-bar"><div class="stat-fill" style="width: 80%"></div></div></div>
+                        <div class="stat-row"><span>Дальность</span><div class="stat-bar"><div class="stat-fill" style="width: 100%"></div></div></div>
+                    </div>
+                </div>
+                <div class="hero-card" data-hero="mage">
+                    <div class="hero-icon">🧙</div>
+                    <h3>Маг</h3>
+                    <p class="hero-desc">Мощные заклинания. Урон по области.</p>
+                    <div class="hero-stats">
+                        <div class="stat-row"><span>HP</span><div class="stat-bar"><div class="stat-fill" style="width: 20%"></div></div></div>
+                        <div class="stat-row"><span>Атака</span><div class="stat-bar"><div class="stat-fill" style="width: 100%"></div></div></div>
+                        <div class="stat-row"><span>Скорость</span><div class="stat-bar"><div class="stat-fill" style="width: 60%"></div></div></div>
+                        <div class="stat-row"><span>Дальность</span><div class="stat-bar"><div class="stat-fill" style="width: 80%"></div></div></div>
+                    </div>
+                </div>
+            </div>
+            <button class="main-btn primary" id="hero-continue-btn">Далее →</button>
+            <button class="back-btn" id="hero-back-btn">← Назад</button>
+        </div>
+
+        <!-- ===== ВЫБОР СЛОЖНОСТИ ===== -->
+        <div id="difficulty-screen" class="screen">
+            <h2>Выбери сложность</h2>
+            <div class="difficulties">
+                <div class="diff-card easy" data-diff="easy">
+                    <div class="icon">😊</div>
+                    <h3>Лёгкий</h3>
+                    <p>Много денег, слабые враги</p>
+                </div>
+                <div class="diff-card normal" data-diff="normal">
+                    <div class="icon">😐</div>
+                    <h3>Нормальный</h3>
+                    <p>Сбалансированный режим</p>
+                </div>
+                <div class="diff-card hard" data-diff="hard">
+                    <div class="icon">😤</div>
+                    <h3>Сложный</h3>
+                    <p>Мало денег, сильные враги</p>
+                </div>
+                <div class="diff-card nightmare" data-diff="nightmare">
+                    <div class="icon">💀</div>
+                    <h3>Кошмар</h3>
+                    <p>Выживи если сможешь!</p>
+                </div>
+            </div>
+            <button class="back-btn" id="diff-back-btn">← Назад</button>
+        </div>
+
+        <!-- ===== НАСТРОЙКИ ===== -->
+        <div id="settings-screen" class="screen">
+            <h2>⚙ Настройки</h2>
+            <div class="settings-grid">
+                <div class="setting-row">
+                    <label>🔊 Звуки</label>
+                    <input type="range" id="sfx-volume" min="0" max="100" value="70">
+                </div>
+                <div class="setting-row">
+                    <label>🎵 Музыка</label>
+                    <input type="range" id="music-volume" min="0" max="100" value="50">
+                </div>
+                <div class="setting-row">
+                    <label>📱 Туториал</label>
+                    <input type="checkbox" id="show-tutorial" checked>
+                </div>
+                <div class="setting-row">
+                    <label>⚡ Автоволна</label>
+                    <input type="checkbox" id="auto-wave">
+                </div>
+                <div class="setting-row">
+                    <label>🎯 Радиус</label>
+                    <input type="checkbox" id="show-range" checked>
+                </div>
+            </div>
+            <button class="back-btn" id="settings-back-btn">← Назад</button>
+        </div>
+
+        <!-- ===== РЕКОРДЫ ===== -->
+        <div id="records-screen" class="screen">
+            <h2>🏆 Таблица рекордов</h2>
+            <div class="records-list" id="records-list"></div>
+            <button class="back-btn" id="records-back-btn">← Назад</button>
+        </div>
+
+        <!-- ===== ИГРОВОЙ UI ===== -->
+        <div id="ui-panel" style="display:none">
+            <div class="ui-left">
+                <div class="ui-item" id="money">
+                    <span class="icon">💰</span>
+                    <span class="value">200</span>
+                </div>
+                <div class="ui-item" id="lives">
+                    <span class="icon">❤️</span>
+                    <span class="value">20</span>
+                </div>
+                <div class="ui-item" id="wave">
+                    <span class="icon">🌊</span>
+                    <span class="value">0/20</span>
+                </div>
+                <div class="ui-item" id="score">
+                    <span class="icon">⭐</span>
+                    <span class="value">0</span>
+                </div>
+            </div>
+            <div class="ui-right">
+                <button class="ui-btn" id="pause-btn" title="Пауза (Esc)">⏸</button>
+                <button class="ui-btn" id="mute-btn" title="Звук">🔊</button>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="900" height="560" style="display:none"></canvas>
+
+        <div id="hint" style="display:none">
+            <span id="hint-text">1-6: башни | Q: огонь | W: солдаты | Space: волна | ПКМ: герой/апгрейд</span>
+        </div>
+
+        <!-- ===== НИЖНЯЯ ПАНЕЛЬ ===== -->
+        <div id="bottom-panel" style="display:none">
+            <div id="tower-panel">
+                <button class="tower-btn basic selected" data-tower="basic">
+                    <span class="hotkey">1</span>
+                    <div class="icon">🔫</div>
+                    <div class="name">Пулемёт</div>
+                    <div class="cost">50$</div>
+                </button>
+                <button class="tower-btn frost" data-tower="frost">
+                    <span class="hotkey">2</span>
+                    <div class="icon">❄️</div>
+                    <div class="name">Заморозка</div>
+                    <div class="cost">75$</div>
+                </button>
+                <button class="tower-btn sniper" data-tower="sniper">
+                    <span class="hotkey">3</span>
+                    <div class="icon">🎯</div>
+                    <div class="name">Снайпер</div>
+                    <div class="cost">100$</div>
+                </button>
+                <button class="tower-btn cannon" data-tower="cannon">
+                    <span class="hotkey">4</span>
+                    <div class="icon">💥</div>
+                    <div class="name">Пушка</div>
+                    <div class="cost">125$</div>
+                </button>
+                <button class="tower-btn laser" data-tower="laser">
+                    <span class="hotkey">5</span>
+                    <div class="icon">⚡</div>
+                    <div class="name">Лазер</div>
+                    <div class="cost">200$</div>
+                </button>
+                <button class="tower-btn barracks" data-tower="barracks">
+                    <span class="hotkey">6</span>
+                    <div class="icon">⚔️</div>
+                    <div class="name">Казарма</div>
+                    <div class="cost">70$</div>
+                </button>
+            </div>
+
+            <div id="abilities-panel">
+                <button class="ability-btn" id="ability-fire">
+                    <span class="icon">☄️</span>
+                    <span class="name">Огонь (Q)</span>
+                    <span class="cooldown" id="fire-cooldown" style="display:none">30s</span>
+                </button>
+                <button class="ability-btn" id="ability-reinforce">
+                    <span class="icon">🛡️</span>
+                    <span class="name">Солдаты (W)</span>
+                    <span class="cooldown" id="reinforce-cooldown" style="display:none">45s</span>
+                </button>
+            </div>
+
+            <div id="wave-controls">
+                <button id="speed-btn">▶ x1</button>
+                <button id="start-wave-btn">🚀 Начать волну</button>
+            </div>
+        </div>
+
+        <!-- ===== ПАУЗА ===== -->
+        <div id="pause-overlay">
+            <h2>⏸ ПАУЗА</h2>
+            <div class="menu-buttons">
+                <button class="main-btn primary" id="resume-btn">▶ Продолжить</button>
+                <button class="main-btn" id="restart-btn">↻ Рестарт</button>
+                <button class="main-btn" id="exit-btn">🚪 В меню</button>
+            </div>
+        </div>
+
+        <!-- ===== ТУТОРИАЛ ===== -->
+        <div id="tutorial-overlay">
+            <div class="tutorial-card">
+                <h2 id="tutorial-title">Добро пожаловать!</h2>
+                <div id="tutorial-content">
+                    <p>Это игра <span class="highlight">Tower Defense</span>.</p>
+                    <p>Твоя задача — защитить базу от волн врагов.</p>
+                </div>
+                <div class="tutorial-dots" id="tutorial-dots"></div>
+                <div class="tutorial-nav">
+                    <button class="back-btn" id="tutorial-skip">Пропустить</button>
+                    <button class="main-btn" id="tutorial-next">Далее →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== РЕЗУЛЬТАТ ===== -->
+        <div id="result-overlay">
+            <h1 id="result-title">ПОБЕДА!</h1>
+            <p id="result-subtitle"></p>
+            <div class="new-record" id="new-record" style="display:none">🏆 НОВЫЙ РЕКОРД!</div>
+            <div class="result-stats">
+                <div class="result-stat">
+                    <div class="label">Волн</div>
+                    <div class="value" id="result-waves">0</div>
+                </div>
+                <div class="result-stat">
+                    <div class="label">Очки</div>
+                    <div class="value" id="result-score">0</div>
+                </div>
+                <div class="result-stat">
+                    <div class="label">Убито</div>
+                    <div class="value" id="result-kills">0</div>
+                </div>
+                <div class="result-stat">
+                    <div class="label">Башен</div>
+                    <div class="value" id="result-towers">0</div>
+                </div>
+            </div>
+            <div class="menu-buttons">
+                <button class="main-btn primary" id="result-restart-btn">↻ Ещё раз</button>
+                <button class="main-btn" id="result-menu-btn">🚪 В меню</button>
+            </div>
+        </div>
+
+        <!-- ===== МЕНЮ АПГРЕЙДА ===== -->
+        <div id="upgrade-menu">
+            <button class="close-btn">&times;</button>
+            <h3>
+                <span id="upgrade-title">Башня</span>
+                <span class="level-stars" id="level-stars">★★★</span>
+            </h3>
+            <div class="stats" id="upgrade-stats"></div>
+            <button class="menu-btn upgrade-btn" id="upgrade-btn">Улучшить</button>
+            <button class="menu-btn sell-btn" id="sell-btn">Продать</button>
+        </div>
+    </div>
+
+    <!-- ===== ЗАГРУЗКА СКРИПТОВ ===== -->
+    <!-- Конфигурация -->
+    <script src="js/config.js"></script>
+
+    <!-- Системы -->
+    <script src="js/systems/AudioSystem.js"></script>
+    <script src="js/systems/SaveSystem.js"></script>
+
+    <!-- Сущности -->
+    <script src="js/entities/Particle.js"></script>
+    <script src="js/entities/Enemy.js"></script>
+    <script src="js/entities/Soldier.js"></script>
+    <script src="js/entities/Projectile.js"></script>
+    <script src="js/entities/Tower.js"></script>
+    <script src="js/entities/Hero.js"></script>
+
+    <!-- UI -->
+    <script src="js/ui/Menu.js"></script>
+
+    <!-- Основная игра -->
+    <script src="js/game.js"></script>
+</body>
+</html>

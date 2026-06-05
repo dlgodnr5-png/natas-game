@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Chess</title>
+		<link rel="stylesheet" href="jquery-ui-1.10.0.css">
+		<link rel="stylesheet" href="chess.css">
+		<link rel="shortcut icon" href="chess.ico">
+	</head>
+	<body>
+		<h1>Chess</h1>
+		<div id="content">
+			<div id="chessboard" role="main"></div>
+			<div id="moves"></div>
+			<div id="clear"></div>
+			<div id="help">
+				<ul>
+					<li>Moves can be made by dragging the pieces on the board, or by clicking the move links in the right panel.</li>
+					<li>Pawns dragged to the last rank are promoted to queens. Use the move links in the right panel to underpromote.</li>
+					<li>Castle by moving the king two squares towards a rook. The rook moves automatically.</li>
+				</ul>
+			</div>
+		</div>
+		<div id="footer"></div>
+		<div id="dim"></div>
+		<script src="jquery-1.9.0.min.js"></script>
+		<script src="jquery-ui-1.10.0.min.js"></script>
+		<script src="jquery.ui.touch-punch.min.js"></script>
+		<script src="chess.min.js"></script>
+		<script>
+			$(makeChessGame);
+		</script>
+	</body>
+</html>

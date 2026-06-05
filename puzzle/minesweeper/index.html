@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineSweeper</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body oncontextmenu="return false">
+
+    <!--Navbar-->
+
+    <div class="navbar">
+        <div id="options" class = "fas fa-cog" onclick = "options()">
+            <ul>
+                <li id = "difficulties" onclick = "new_game(10,9,9)">beginner</li>
+                <li id = "difficulties" onclick = "new_game(30,16,16)">intermediate</li>
+                <li id = "difficulties" onclick = "new_game(99,16,30)">expert</li>
+                <li id = "customizer" onclick = "customize()">Custom</li>
+                <li id = "AI" onclick = "AI_turn = true,  game_status = 1">AI</li>
+            </ul>
+        </div>
+        <div id="center_nav">
+            <div id="bomb_count" class = "fas fa-bomb">: 10</div>
+            <div id="face" class = "fas fa-smile" onclick = "new_game(total_bombs,row,col)"></div>
+            <div id ="clock" class = "far fa-clock">: 0</div>
+        </div>
+        <div class="github">
+            <a style="color: white" class = "fab fa-github-square" href="https://github.com/Mattli8312"></a>
+        </div>
+    </div>
+
+    <!--game_board-->
+
+    <div id="grid"></div>
+
+    <!--UI interactions/Game logic-->
+    <script src="AI.js"></script>
+    <script src="main_code.js"></script>
+    <script src="main_app.js"></script>
+
+</body>
+</html>
