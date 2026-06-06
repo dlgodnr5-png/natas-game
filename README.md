@@ -1,10 +1,10 @@
 # 🎮 모두의 게임 (natas-game)
 
-GitHub의 인기 **오픈소스 게임**을 테마별로 모은 **순수 정적 게임 포털**입니다. by **NATAS 팀**.
+GitHub의 인기 **오픈소스 게임**을 테마별로 모은 **AI WORLD MAKER 구독 멤버십 게임 포털**입니다. by **NATAS 팀**.
 
 - 배포: <https://game.spatialhealing.co.kr/>
 - 저장소: <https://github.com/dlgodnr5-png/natas-game>
-- 멤버십/구독 총괄: [AI WORLD MAKER](https://aiworldmaker.happygold.shop) — 이 포털은 결제/인증 로직을 두지 않고 링크만 합니다.
+- 멤버십/구독 총괄: [AI WORLD MAKER](https://aiworldmaker.happygold.shop). 허브 SSO 구독 게이트 적용(`assets/js/awm-gate.js` + 게임별 직접URL 차단 가드) — 로그인 + 구독 멤버십 사용자만 플레이. 결제/인증은 허브에서 총괄.
 
 ## 구조
 

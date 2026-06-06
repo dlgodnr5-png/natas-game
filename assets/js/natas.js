@@ -46,8 +46,8 @@
     '<div class="inner">' +
       "<div>" +
         '<div style="font-weight:800;color:var(--ink);font-size:15px;margin-bottom:6px">🎮 모두의 게임 · NATAS 팀</div>' +
-        '<div class="biz">GitHub 오픈소스 게임을 테마별로 모은 무료 플레이 포털입니다. ' +
-        '구독 멤버십은 <a href="' + AIWM + '" target="_blank" rel="noopener">AI WORLD MAKER</a>에서 총괄 관리됩니다.</div>' +
+        '<div class="biz">GitHub 오픈소스 게임을 테마별로 모은 구독 멤버십 게임 포털입니다. ' +
+        '로그인 + 구독 멤버십(<a href="' + AIWM + '" target="_blank" rel="noopener">AI WORLD MAKER</a> 총괄 관리)으로 모든 게임을 광고·시간제한 없이 이용합니다.</div>' +
       "</div>" +
       '<div style="display:flex;gap:22px;flex-wrap:wrap">' +
         "<div>" +

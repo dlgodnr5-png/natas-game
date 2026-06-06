@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<style id="awm-pp">html.awm-gated body>*:not(#natas-header){visibility:hidden!important}</style>
+<script>try{if(localStorage.getItem('awm_subscribed')!=='1')document.documentElement.className+=(document.documentElement.className?' ':'')+'awm-gated';}catch(_){}</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>보드·카드 — 모두의 게임</title>
   <meta name="description" content="체스·솔리테어·틱택토·체커 등 보드/카드 오픈소스 게임 + lichess 등 명작 링크.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
   <link rel="stylesheet" href="/assets/css/natas.css">
+<script src="/assets/js/awm-gate.js" defer></script>
 </head>
 <body>
   <div id="natas-header"></div>
@@ -73,7 +76,7 @@
       <a class="game-card" style="--g:var(--grad-board)" href="/play/?src=/board-card/blackjack/&t=Blackjack&theme=board-card&lic=Apache-2.0&repo=https%3A%2F%2Fgithub.com%2FSaganaki22%2FBlackjack">
         <div class="game-thumb">🃏</div>
         <div class="game-body">
-          <div class="game-title">Blackjack <span class="badge badge-mit">Apache-2.0</span></div>
+          <div class="game-title">Blackjack <span class="badge badge-apache">Apache-2.0</span></div>
           <p class="game-desc">21에 가깝게! 딜러와 겨루는 카지노 블랙잭. 칩 베팅·애니메이션 카드 딜링까지.</p>
         </div>
         <div class="game-meta">출처: Saganaki22/Blackjack · Saganaki22</div>
@@ -119,7 +122,7 @@
 
     <div class="sub-banner">
       <div><h4>👑 멤버십은 AI WORLD MAKER에서 총괄 관리</h4>
-        <p>모든 내장 게임은 무료입니다. 구독·결제는 AI WORLD MAKER에서.</p></div>
+        <p>구독 멤버십으로 모든 게임을 무제한 이용. 구독·결제는 AI WORLD MAKER에서.</p></div>
       <a class="btn btn-gold" href="https://aiworldmaker.happygold.shop/subscribe" target="_blank" rel="noopener">멤버십 보러가기 →</a>
     </div>
   </main>
