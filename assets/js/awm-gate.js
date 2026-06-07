@@ -24,12 +24,23 @@
     op: "awm_is_operator",
   };
 
+  // 허브 결정(주석 의도 구현): 구독자 + 운영자 + 승인이메일은 구독 없이도 통과.
+  // 승인이메일 추가 시 소문자로 기입.
+  var APPROVED_EMAILS = ["dlgodnr5@gmail.com"];
+  function emailApproved(em) { return !!em && APPROVED_EMAILS.indexOf(String(em).toLowerCase()) >= 0; }
+  // 서버 응답(verify/silent) 기준 통과 판정 — subscribed | role==operator | 승인이메일
+  function allowedFromData(d) {
+    return !!(d && (d.subscribed || d.role === "operator" || emailApproved(d.email)));
+  }
+
   function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
   function nowSec() { return Math.floor(Date.now() / 1000); }
+  // 네트워크 실패 시 캐시 기준 통과 판정 — 토큰 만료 아니면 구독/운영자/승인이메일 통과
   function cachedOk() {
     var e = get(K.exp);
-    return get(K.sub) === "1" && (!e || parseInt(e, 10) > nowSec());
+    if (e && parseInt(e, 10) <= nowSec()) return false;
+    return get(K.sub) === "1" || get(K.op) === "1" || emailApproved(get(K.email));
   }
   function setGate(on) { document.documentElement.classList.toggle("awm-gated", !!on); }
 
@@ -53,7 +64,7 @@
           set(K.sub, d.subscribed ? "1" : "0");
           if (d.email) set(K.email, String(d.email).toLowerCase());
           if (typeof d.role !== "undefined") set(K.op, d.role === "operator" ? "1" : "0");
-          cb(!!d.subscribed);
+          cb(allowedFromData(d));
         } else { cb(false); }
       })
       .catch(function () { cb(cachedOk()); });
@@ -67,7 +78,7 @@
     function onMsg(e) {
       if (ALLOWED.indexOf(e.origin) < 0) return;
       var d = e.data || {};
-      if (d.type === "AWM_AUTH_SUCCESS") { saveAuth(d); finish(!!d.subscribed); }
+      if (d.type === "AWM_AUTH_SUCCESS") { saveAuth(d); finish(allowedFromData(d)); }
       else if (d.type === "AWM_AUTH_NONE") { finish(false); }
     }
     function finish(ok) {
