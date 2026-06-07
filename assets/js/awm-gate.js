@@ -118,6 +118,8 @@
     s.id = "awm-gate-style";
     s.textContent =
       "html.awm-gated body{overflow:hidden!important}" +
+      // pre-paint(body>* 숨김)이 페이월까지 가려 빈 화면이 되는 버그 수정 — 페이월은 강제 표시
+      "html.awm-gated #awm-paywall,html.awm-gated #awm-paywall *{visibility:visible!important}" +
       "#awm-paywall{position:fixed;inset:0;z-index:2147483600;display:flex;align-items:center;justify-content:center;" +
       "background:rgba(8,12,24,.92);backdrop-filter:blur(6px);font-family:Pretendard,system-ui,sans-serif;padding:20px}" +
       "#awm-paywall .box{max-width:380px;width:100%;background:#111827;border:1px solid #1f2937;border-radius:20px;" +
