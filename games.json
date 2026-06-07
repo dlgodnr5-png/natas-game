@@ -10,6 +10,8 @@
         { "name": "2048", "type": "embed", "path": "/arcade/2048/", "license": "MIT", "source": "https://github.com/gabrielecirulli/2048", "author": "Gabriele Cirulli", "badge": "MIT", "thumb": "🎲" },
         { "name": "팩맨", "type": "embed", "path": "/arcade/pacman/", "license": "CC0-1.0", "source": "https://github.com/platzhersh/pacman-canvas", "author": "platzh1rsch", "badge": "CC0", "thumb": "🟡" },
         { "name": "테트리스", "type": "embed", "path": "/arcade/tetris/", "license": "MIT", "source": "https://github.com/jakesgordon/javascript-tetris", "author": "Jake Gordon", "badge": "MIT", "thumb": "🟦" },
+        { "name": "테트리스 프로", "type": "embed", "path": "/arcade/tetris-pro/", "license": "자작", "source": "https://game.spatialhealing.co.kr", "author": "NATAS 팀", "badge": "자작", "thumb": "🟪" },
+        { "name": "FG 테트리스", "type": "embed", "path": "/arcade/fg-tetris/", "license": "자작", "source": "https://game.spatialhealing.co.kr", "author": "NATAS 팀", "badge": "자작", "thumb": "🟧" },
         { "name": "브레이크아웃", "type": "embed", "path": "/arcade/breakout/", "license": "MIT", "source": "https://github.com/jakesgordon/javascript-breakout", "author": "Jake Gordon", "badge": "MIT", "thumb": "🧱" },
         { "name": "퐁", "type": "embed", "path": "/arcade/pong/", "license": "MIT", "source": "https://github.com/jakesgordon/javascript-pong", "author": "Jake Gordon", "badge": "MIT", "thumb": "🏓" },
         { "name": "프로거", "type": "embed", "path": "/arcade/frogger/", "license": "MIT", "source": "https://github.com/wesliang/arcade-game", "author": "Wesley Liang", "badge": "MIT", "thumb": "🐸" },
@@ -54,7 +56,7 @@
         { "name": "Space Invaders", "type": "embed", "path": "/action-shooter/space-shooter/", "license": "MIT", "source": "https://github.com/dwmkerr/spaceinvaders", "author": "Dave Kerr", "badge": "MIT", "thumb": "👾" },
         { "name": "Arena5", "type": "embed", "path": "/action-shooter/arena5/", "license": "MIT", "source": "https://github.com/kevinroast/arena5", "author": "Kevin Roast", "badge": "MIT", "thumb": "🌀" },
         { "name": "Brick Breaker", "type": "embed", "path": "/action-shooter/brick-breaker/", "license": "MIT", "source": "https://github.com/cchangr/Brick-Breaker", "author": "chen", "badge": "MIT", "thumb": "🧱" },
-        { "name": "갤러그", "type": "external", "url": "https://natas-galaga.spatialhealing.co.kr/", "license": "내부 배포", "source": "https://natas-galaga.spatialhealing.co.kr/", "author": "NATAS 팀", "badge": "명작", "thumb": "🚀" }
+        { "name": "갤러그", "type": "embed", "path": "/action-shooter/galaga/", "license": "자작", "source": "https://github.com/jwilliams219/galaga", "author": "NATAS 팀 (base: Josh Williams)", "badge": "자작", "thumb": "🚀" }
       ]
     },
     {

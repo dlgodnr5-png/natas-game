@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<script>if(window.top===window.self){location.replace('/play/?src='+encodeURIComponent(location.pathname));}</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Tetris Pro — AI WORLD MAKER</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div class="bg-layer" id="bgImage" aria-hidden="true"></div>
+<div class="bg-tint" aria-hidden="true"></div>
+<div class="bg-label" id="bgLabel"></div>
+
+<!-- AWM 표준 헤더 제거: 모두의 게임 허브(/play/)가 자체 헤더·구독 게이트(awm-gate.js)를 주입함 -->
+
+<div class="app">
+
+  <!-- 게임 컨트롤 바 (게임 전용 버튼) -->
+  <div class="gamebar">
+    <h1 class="game-title">Tetris <em>Pro</em></h1>
+    <nav class="game-controls">
+      <button class="btn ghost" id="btnPause" title="일시정지 (P / Esc)">⏸ 일시정지</button>
+      <button class="btn ghost" id="btnMute" aria-pressed="false" title="음소거">🔊</button>
+      <button class="btn ghost" id="btnHelp">조작법</button>
+      <button class="btn ghost" id="btnExit" title="AI WORLD MAKER 게임 목록으로 나가기">🚪 나가기</button>
+    </nav>
+  </div>
+
+  <main class="layout">
+
+    <aside class="side left">
+      <div class="panel">
+        <h3>HOLD</h3>
+        <canvas id="hold" width="120" height="120"></canvas>
+      </div>
+      <div class="panel stats">
+        <h3>STATS</h3>
+        <dl>
+          <dt>SCORE</dt><dd id="score">0</dd>
+          <dt>LINES</dt><dd id="lines">0</dd>
+          <dt>LEVEL</dt><dd id="level">1</dd>
+          <dt>TIME</dt><dd id="timer">00:00</dd>
+        </dl>
+      </div>
+    </aside>
+
+    <section class="stage">
+      <canvas id="board" width="300" height="600"></canvas>
+      <div class="overlay" id="overlay">
+        <div class="card">
+          <h2 id="overlayTitle">PRESS ENTER</h2>
+          <p id="overlayMsg">엔터 키로 게임을 시작합니다.</p>
+          <button class="btn primary" id="overlayBtn">시작</button>
+        </div>
+      </div>
+    </section>
+
+    <aside class="side right">
+      <div class="panel">
+        <h3>NEXT</h3>
+        <canvas id="next" width="120" height="360"></canvas>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer class="copyright" id="copyright"></footer>
+
+  <!-- 도움말 모달 -->
+  <div class="modal" id="helpModal" hidden>
+    <div class="modal-card">
+      <button class="modal-close" id="helpClose" aria-label="닫기">×</button>
+      <h2>조작법</h2>
+      <table class="keys">
+        <tr><td>← →</td><td>이동</td></tr>
+        <tr><td>↓</td><td>소프트 드롭</td></tr>
+        <tr><td>Space</td><td>하드 드롭</td></tr>
+        <tr><td>↑ / X</td><td>시계방향 회전</td></tr>
+        <tr><td>Z / Ctrl</td><td>반시계방향 회전</td></tr>
+        <tr><td>Shift / C</td><td>HOLD</td></tr>
+        <tr><td>P / Esc</td><td>일시정지</td></tr>
+        <tr><td>Enter</td><td>시작 / 재시작</td></tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/tetris.js?v=8"></script>
+<script src="js/music.js?v=8"></script>
+<script src="js/backdrop.js?v=8"></script>
+<script src="js/app.js?v=8"></script>
+</body>
+</html>
